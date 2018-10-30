@@ -1,0 +1,9 @@
+.hero {
+  height: 100vh;
+  background-color: #272f07;
+  background-image: url("../img/hero-bg-mobile@1x.jpg");
+  color: #ffffff;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-bg-mobile@2x.jpg");
+  }
+}

@@ -9,22 +9,56 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="top">
+  <div class="visually-hidden">
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
-  <header class="page-header">
+  <header class="page-header no-js">
+    <div class="page-header__wrapper container">
+      <svg class="page-header__image" width="50" height="50" alt="Логотип"><use xlink:href="#christmas_tree"/></svg>
+      <h1 class="page-header__title">Магазин Елок</h1>
+      <button class="page-header__button no-js" type="button"><span class="visually-hidden">Открыть\закрыть меню</span></button>
+    </div>
+    <nav class="page-header__navigation container">
+      <ul class="page-header__list">
+        <li class="page-header__item"><a class="page-header__link" href="#top">Наверх</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#">Акции</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#">Каталог</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#">Доставка</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#">Контакты</a></li>
+      </ul>
+    </nav>
 
   </header>
 
   <main>
 
-    <section>
-
+    <section class="hero">
+      <h2 class="visually-hidden">Наши акции</h2>
+      <strong class="hero__lead">Купи любую елку и получи гирлянду в подарок!</strong>
+      <strong class="hero__lead">До нового года осталось:</strong>
+      <p class="hero__countdown">
+        <div class="hero__wrapper">
+          <span class="hero__days">15</span> <span class="hero__label">дней</span>
+        </div>
+        <div class="hero__wrapper">
+          <span class="hero__days">23</span> <span class="hero__label">часа</span>
+        </div>
+        <div class="hero__wrapper">
+          <span class="hero__days">29</span> <span class="hero__label">минут</span>
+        </div>
+        <div class="hero__wrapper">
+          <span class="hero__days">14</span> <span class="hero__label">секунд</span>
+        </div>
+      </p>
     </section>
   </main>
 
   <footer>
 
   </footer>
+  <script defer src="js/script.min.js"></script>
 </body>
 
 </html>
