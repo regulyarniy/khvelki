@@ -1,0 +1,9 @@
+//Imports
+//Normalize https://github.com/JohnAlbin/normalize-scss
+@import "normalize";
+@include normalize();
+//Variables
+@import "variables";
+//Helpers and global
+@import "scaffolding";
+//Blocks

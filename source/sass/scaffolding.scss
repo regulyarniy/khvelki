@@ -1,0 +1,64 @@
+//Fonts
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url("../fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-bold-webfont.woff") format("woff");
+  font-display: swap;
+}
+
+//Global styles
+body {
+  margin: 0;
+  min-width: 320px;
+  color: $color-content;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: $font-primary;
+  line-height: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//Hide visually for accessability
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
