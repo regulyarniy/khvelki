@@ -42,6 +42,9 @@
   width: 65%;
   border-radius: 5px;
   background-color: $color-salad;
+  background-position: 30px 50%;
+  background-size: 70px 30px;
+  background-repeat: no-repeat;
   color: $color-tomato;
   text-align: center;
   text-transform: uppercase;
@@ -49,6 +52,26 @@
   font-size: 20px;
   line-height: 24px;
   transition: all 0.3s ease;
+
+  &--tree {
+    background-image: url(../img/tree.svg);
+  }
+
+  &--sack {
+    background-image: url(../img/sack.svg);
+  }
+
+  &--tree-pot {
+    background-image: url(../img/tree-pot.svg);
+  }
+
+  &--lights {
+    background-image: url(../img/lights.svg);
+  }
+
+  &--bauble {
+    background-image: url(../img/bauble.svg);
+  }
 
   &:hover,
   &:focus {

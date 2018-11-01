@@ -3,55 +3,64 @@ name: "Елка с шишками",
 id: 1,
 price: "100 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--tree"
 }, {
 name: "Елка зеленая",
 id: 2,
 price: "200 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--tree"
 }, {
 name: "Елка с белыми иголками",
 id: 3,
 price: "300 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--tree"
 }, {
 name: "Елка в горшке",
 id: 4,
 price: "400 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--tree-pot"
 }, {
-name: "Гирлянда",
+name: "Гирлянды",
 id: 5,
 price: "500 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--lights"
 }, {
 name: "Набор шариков",
 id: 6,
 price: "600 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--bauble"
 }, {
 name: "Комплект Премиум",
 id: 7,
 price: "700 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--sack"
 }, {
 name: "Комплект Классический",
 id: 8,
 price: "800 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--sack"
 },{
 name: "Комплект Эксклюзивный",
 id: 9,
 price: "900 р.",
 description: "Высота от 1.5м до 2.1м",
-image: "img/product-placeholder.jpg"
+image: "img/product-placeholder.jpg",
+buttonClass: "product__order--sack"
 }
 ]%}
 
@@ -127,7 +136,7 @@ image: "img/product-placeholder.jpg"
             <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
           </div>
             <b class="product__price">{{product.price}}</b>
-            <a class="product__order no-js" href="#order">Купить</a>
+            <a class="product__order no-js {{product.buttonClass}}" href="#order">Купить</a>
         </li>
         {% endfor %}
       </ul>
