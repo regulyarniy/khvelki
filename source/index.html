@@ -11,7 +11,7 @@ price: "200 р.",
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg"
 }, {
-name: "Елка белая",
+name: "Елка с белыми иголками",
 id: 3,
 price: "300 р.",
 description: "Высота от 1.5м до 2.1м",
@@ -83,6 +83,7 @@ image: "img/product-placeholder.jpg"
         <li class="page-header__item"><a class="page-header__link" href="#hero">Акции</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#">Каталог</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#">Доставка</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#order">Заказ</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#">Контакты</a></li>
       </ul>
     </nav>
@@ -96,7 +97,7 @@ image: "img/product-placeholder.jpg"
       <h2 class="visually-hidden">Наши акции</h2>
       <p class="hero__lead"><span class="hero__title">Исскуственные елочки любых размеров в Хабаровске</span></p>
       <p class="hero__lead"><span class="hero__title">Бесплатная доставка до двери. Предложение ограничено!</span></p>
-      <p class="hero__lead"><span class="hero__title">До нового года осталось:</span></p>
+      <p class="hero__lead"><span class="hero__title hero__title--big">До окончания акции осталось:</span></p>
       <div class="hero__countdown">
         <div class="hero__wrapper">
           <span class="hero__count hero__count--days">15</span><br><span class="hero__label">дней</span>
@@ -121,11 +122,14 @@ image: "img/product-placeholder.jpg"
         {% for product in products %}
         <li class="catalog__item product">
           <b class="product__name">{{product.name}}</b>
-          <b class="product__price">{{product.price}}</b>
           <b class="product__description">{{product.description}}</b>
-          <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
+          <div class="product__wrapper">
+            <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
+          </div>
+            <b class="product__price">{{product.price}}</b>
+            <a class="product__order no-js" href="#order">Купить</a>
         </li>
-          {% endfor %}
+        {% endfor %}
       </ul>
     </section>
   </main>

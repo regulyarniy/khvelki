@@ -1,0 +1,37 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.catalog__descrition {
+  margin-top: 20px;
+  width: 94%;
+  color: $color-tomato;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.catalog__caption {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 94%;
+  color: $color-tree;
+  text-align: center;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  width: 94%;
+  list-style: none;
+}
+
+.catalog__item {
+  list-style: none;
+}
