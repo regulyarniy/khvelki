@@ -1,13 +1,15 @@
 .hero {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  // align-content: flex-start;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 71px);
   background-color: #272f07;
   background-image: url("../img/hero-bg-mobile@1x.jpg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
 
@@ -16,11 +18,20 @@
   }
 }
 
+.hero__overlay {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .hero__lead {
+  position: relative;
+  z-index: 1;
   margin: 0;
-  margin-top: 100px;
-  margin-bottom: 60px;
+  margin-top: 20px;
   width: 96%;
+  color: $color-sky;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -29,11 +40,9 @@
   line-height: 36px;
 }
 
-.hero__title {
-  background-color: $color-jade;
-}
-
 .hero__countdown {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -57,13 +66,6 @@
   font-family: $font-primary;
 }
 
-.hero__label {
-  display: inline-block;
-  background-color: $color-jade;
-  font-size: 22px;
-  line-height: 24px;
-}
-
 .hero__count {
   display: inline-block;
   margin-bottom: 10px;
@@ -71,7 +73,13 @@
   border: 1px solid #000000;
   border-radius: 5px;
   background-color: $color-gold;
-  color: $color-tree;
+  color: $color-jade;
   font-size: 28px;
   line-height: 30px;
+}
+
+.hero__label {
+  color: $color-sky;
+  font-size: 20px;
+  line-height: 24px;
 }

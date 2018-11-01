@@ -1,6 +1,6 @@
 //Countdown timer
-'use strict';
 (function() {
+  'use strict';
   var toDate = new Date("Jan 1 2019").getTime(),
     now = new Date().getTime(),
     secondsToNewYear = Math.floor((toDate - now) / 1000),

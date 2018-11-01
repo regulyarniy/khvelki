@@ -1,5 +1,6 @@
 //Dropdown menu
 (function() {
+  'use strict';
   var topMenu = document.querySelector(".page-header"),
     menuButton = document.querySelector(".page-header__button"),
     navigationBlock = document.querySelector(".page-header__navigation");

@@ -1,3 +1,60 @@
+{% set products = [ {
+name: "Елка с шишками",
+id: 1,
+price: "100 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Елка зеленая",
+id: 2,
+price: "200 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Елка белая",
+id: 3,
+price: "300 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Елка в горшке",
+id: 4,
+price: "400 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Гирлянда",
+id: 5,
+price: "500 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Набор шариков",
+id: 6,
+price: "600 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Комплект Премиум",
+id: 7,
+price: "700 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}, {
+name: "Комплект Классический",
+id: 8,
+price: "800 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+},{
+name: "Комплект Эксклюзивный",
+id: 9,
+price: "900 р.",
+description: "Высота от 1.5м до 2.1м",
+image: "img/product-placeholder.jpg"
+}
+]%}
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -23,7 +80,7 @@
     <nav class="page-header__navigation container">
       <ul class="page-header__list">
         <li class="page-header__item"><a class="page-header__link" href="#top">Наверх</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="#">Акции</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#hero">Акции</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#">Каталог</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#">Доставка</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#">Контакты</a></li>
@@ -34,9 +91,11 @@
 
   <main>
 
-    <section class="hero">
+    <section class="hero" id="hero">
+      <canvas class="hero__overlay" id="snow"></canvas>
       <h2 class="visually-hidden">Наши акции</h2>
-      <p class="hero__lead"><span class="hero__title">Купи любую елку и получи гирлянду в подарок!</span></p>
+      <p class="hero__lead"><span class="hero__title">Исскуственные елочки любых размеров в Хабаровске</span></p>
+      <p class="hero__lead"><span class="hero__title">Бесплатная доставка до двери. Предложение ограничено!</span></p>
       <p class="hero__lead"><span class="hero__title">До нового года осталось:</span></p>
       <div class="hero__countdown">
         <div class="hero__wrapper">
@@ -52,6 +111,22 @@
           <span class="hero__count hero__count--seconds">14</span><br><span class="hero__label">секунд</span>
         </div>
       </div>
+    </section>
+
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог товаров</h2>
+      <b class="catalog__descrition">Выберите свою елочку на новый год</b>
+      <b class="catalog__caption">Чтобы не тратить время на выбор мы предлагаем Вам лучшие исскуственные елки в этом году</b>
+      <ul class="catalog__list">
+        {% for product in products %}
+        <li class="catalog__item product">
+          <b class="product__name">{{product.name}}</b>
+          <b class="product__price">{{product.price}}</b>
+          <b class="product__description">{{product.description}}</b>
+          <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
+        </li>
+          {% endfor %}
+      </ul>
     </section>
   </main>
 

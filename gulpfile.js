@@ -19,7 +19,8 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   imagemin = require("gulp-imagemin"),
   webp = require("gulp-webp"),
-  nunjucks = require('gulp-nunjucks-render');
+  nunjucks = require('gulp-nunjucks-render'),
+  babel = require('gulp-babel');
 
 gulp.task("clean", function() {
   return del("build");
@@ -81,6 +82,9 @@ gulp.task("js", function(done) {
   pump([
       gulp.src("source/**/*.js"),
       concat("script.min.js"),
+      babel({
+        presets: ['@babel/env']
+      }),
       uglify(),
       gulp.dest("build/js"),
       server.stream()
