@@ -3,13 +3,12 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid $color-watermelon;
-  background-image: url("../img/catalog-bg.jpg");
-  background-position: center 75px;
-  background-size: auto 50px;
-  background-repeat: repeat-x;
+  background-image: url("../img/catalog-bg.jpg"),
+    linear-gradient(#bd1b06, #bd1b06);
+  background-position: center 75px, center top;
+  background-size: auto 50px, auto 75px;
+  background-repeat: repeat-x, repeat-x;
 }
 
 .product__name {
@@ -17,7 +16,6 @@
   padding-top: 20px;
   min-height: 76px;
   width: 100%;
-  background-color: #bd1b06;
   color: $color-gold;
   text-align: center;
   text-transform: uppercase;
@@ -43,7 +41,7 @@
   border-radius: 5px;
   background-color: $color-salad;
   background-position: 30px 50%;
-  background-size: 70px 30px;
+  background-size: 30px 30px;
   background-repeat: no-repeat;
   color: $color-tomato;
   text-align: center;
