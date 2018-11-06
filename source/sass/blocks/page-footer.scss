@@ -1,8 +1,65 @@
 .page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
   min-height: 100px;
   background-color: $color-ocean;
   background-image: url("../img/footer-bg.png");
   background-position: center top;
   background-size: auto 30px;
   background-repeat: repeat-x;
+  color: $color-sky;
+}
+
+.page-footer__title {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.page-footer__link {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  width: 50%;
+  background-position: 0 50%;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  color: $color-salad;
+  font-size: 16px;
+  line-height: 20px;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--whatsapp {
+    background-image: url("../img/whatsapp-logo.svg");
+  }
+
+  &--tel {
+    background-image: url("../img/phone-call.svg");
+  }
+
+  &--ig {
+    background-image: url("../img/instagram.svg");
+  }
+
+  &--vk {
+    background-image: url("../img/vk.svg");
+  }
+
+  &--ok {
+    background-image: url("../img/ok.svg");
+  }
 }
