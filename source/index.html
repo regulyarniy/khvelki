@@ -1,68 +1,78 @@
 {% set products = [ {
 name: "Елка с шишками",
 id: 1,
-price: "100 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree"
 }, {
 name: "Елка зеленая",
 id: 2,
-price: "200 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree"
 }, {
 name: "Елка с белыми иголками",
 id: 3,
-price: "300 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree"
 }, {
 name: "Елка в горшке",
 id: 4,
-price: "400 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree-pot"
 }, {
 name: "Гирлянды",
 id: 5,
-price: "500 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--lights"
 }, {
 name: "Набор шариков",
 id: 6,
-price: "600 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--bauble"
 }, {
 name: "Комплект Премиум",
 id: 7,
-price: "700 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--sack"
 }, {
 name: "Комплект Классический",
 id: 8,
-price: "800 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--sack"
 },{
 name: "Комплект Эксклюзивный",
 id: 9,
-price: "900 р.",
+price: [100, 200, 300],
+types: ["150 см", "180 см", "210 см"],
 description: "Высота от 1.5м до 2.1м",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--sack"
 }
 ]%}
+
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -160,19 +170,43 @@ buttonClass: "product__order--sack"
       <h2 class="visually-hidden">Каталог товаров</h2>
       <b class="catalog__descrition">Выберите свою елочку на новый год</b>
       <b class="catalog__caption">Чтобы не тратить время на выбор мы предлагаем Вам лучшие исскуственные елки в этом году</b>
-      <ul class="catalog__list">
-        {% for product in products %}
-        <li class="catalog__item product">
-          <b class="product__name">{{product.name}}</b>
-          <b class="product__description">{{product.description}}</b>
-          <div class="product__wrapper">
-            <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
-          </div>
-            <b class="product__price">{{product.price}}</b>
-            <a class="product__order no-js {{product.buttonClass}}" href="#order">Купить</a>
-        </li>
-        {% endfor %}
-      </ul>
+      {% for product in products %}
+      <div class="catalog__slider">
+        <div class="catalog__frame">
+          <ul class="catalog__list">
+            {% for price in product.price %}
+            <li class="catalog__item product">
+              <div class="product__container">
+                <b class="product__name">{{product.name}} {{product.types[loop.index0]}}</b>
+                <b class="product__description">{{product.description}}</b>
+                <b class="product__description">{{product.types[loop.index0]}}</b>
+                <div class="product__wrapper">
+                  <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
+                </div>
+                  <b class="product__price">{{product.price[loop.index0]}} руб.</b>
+                  <a class="product__order no-js {{product.buttonClass}}" href="#order">Купить</a>
+                </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <button class="product__slide product__slide--prev" type="button">
+          <svg class="page-header__image" width="25" height="25" alt="Предыдущий вариант"><use xlink:href="#slider-button"/></svg>
+        </button>
+        <button class="product__slide product__slide--next" type="button">
+          <svg class="page-header__image" width="25" height="25" alt="Следующий вариант"><use xlink:href="#slider-button"/></svg>
+        </button>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section class="order-form">
+      <h2 class="order-form__title">Отправить заказ</h2>
+      <form class="order-form__form" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+        <input class="order-form__input" type="text" name="name" id="name">
+        <label for="name" class="order-form__label"></label>
+        <button class="order-form__submit" type="submit">Отправить заказ</button>
+      </form>
     </section>
 
     <section class="order-info">

@@ -1,14 +1,17 @@
 .product {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   padding-bottom: 20px;
   background-image: url("../img/catalog-bg.jpg"),
     linear-gradient(#bd1b06, #bd1b06);
   background-position: center 75px, center top;
   background-size: auto 50px, auto 75px;
   background-repeat: repeat-x, repeat-x;
+}
+
+.product__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .product__name {
@@ -95,4 +98,28 @@
 .product__image {
   max-width: 100%;
   height: auto;
+}
+
+.product__slide {
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &--prev {
+    left: 0;
+    transform: rotate(180deg) translateY(2px);
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &--prev svg,
+  &--next svg {
+    width: 25px;
+  }
 }

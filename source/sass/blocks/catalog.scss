@@ -25,15 +25,33 @@
   line-height: 30px;
 }
 
+.catalog__slider {
+  position: relative;
+  max-width: 100%;
+}
+
+.catalog__frame {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+}
+
 .catalog__list {
+  display: inline-block;
   margin: 0;
   padding: 0;
-  width: 100%;
+  max-width: 100%;
   list-style: none;
 }
 
 .catalog__item {
+  position: relative;
+  display: inline-block;
   padding-right: 3%;
   padding-left: 3%;
+  max-width: 100%;
   list-style: none;
 }
