@@ -2,6 +2,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: $color-content;
+  background-image: linear-gradient(
+    to bottom,
+    $color-content,
+    lighten($color-content, 50)
+  );
   color: #ffffff;
 }
 
