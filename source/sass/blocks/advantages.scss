@@ -1,0 +1,89 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $color-content;
+  color: #ffffff;
+}
+
+.advantages__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: $shadow-glowing;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  display: block;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  padding: 0;
+  min-height: 250px;
+  width: 250px;
+  border: 8px double $color-gold;
+  border-radius: 50%;
+  background-color: $color-ocean;
+  background-position: center;
+  background-size: 180px 180px;
+  background-repeat: no-repeat;
+  list-style: none;
+
+  &--guarantee {
+    background-image: url("../img/guarantee.svg");
+  }
+
+  &--delivery {
+    background-image: url("../img/delivery-truck.svg");
+  }
+
+  &--prices {
+    background-image: url("../img/piggy-bank.svg");
+  }
+
+  &--review {
+    background-image: url("../img/rating.svg");
+  }
+}
+
+.advantages__wrapper {
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.advantages__name {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: $shadow-glowing;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.advantages__description {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
