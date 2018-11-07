@@ -28,12 +28,14 @@
 .catalog__slider {
   position: relative;
   max-width: 100%;
+  width: 100%;
 }
 
 .catalog__frame {
   position: relative;
   overflow: hidden;
   max-width: 100%;
+  width: 100%;
   white-space: nowrap;
   font-size: 0;
   line-height: 0;
@@ -44,6 +46,7 @@
   margin: 0;
   padding: 0;
   max-width: 100%;
+  width: 100%;
   list-style: none;
 }
 
@@ -53,5 +56,6 @@
   padding-right: 3%;
   padding-left: 3%;
   max-width: 100%;
+  width: 100%;
   list-style: none;
 }

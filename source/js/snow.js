@@ -16,7 +16,7 @@
     function createSnow() {
 
       var particles = [];
-      var particleSize = 3;
+      var particleSize = 2;
       var maxParticles = 100;
       var particleOpacity = .7;
 

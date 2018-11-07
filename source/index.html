@@ -1,73 +1,73 @@
 {% set products = [ {
-name: "Елка с шишками",
+name: "Елка «Стандарт»",
 id: 1,
-price: [100, 200, 300],
+price: [2000, 3000, 4000],
 types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+description: "Собирается за 5 минут, отлично выглядит! Кончики веток светло-зеленого цвета",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree"
 }, {
-name: "Елка зеленая",
+name: "Елка «Премиум»",
 id: 2,
-price: [100, 200, 300],
+price: [2500, 3500, 6000],
 types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+description: "Как настоящая! В комплекте шишки и красные ягодки, кончики веток украшены инеем",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree"
 }, {
-name: "Елка с белыми иголками",
+name: "Елка «Базовая»",
 id: 3,
-price: [100, 200, 300],
+price: [1800, 2300, 3000],
 types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+description: "Простая, но красивая елка. Кончики веток слегка белые",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree"
 }, {
 name: "Елка в горшке",
 id: 4,
-price: [100, 200, 300],
-types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+price: [2000, 2000],
+types: ["с снежинками", "с лампочками"],
+description: "Елка в горшке, высота 60 см, с встроенной гирляндой и звездой. Отличный выбор для офисвного стола!",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--tree-pot"
 }, {
 name: "Гирлянды",
 id: 5,
-price: [100, 200, 300],
-types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+price: [300, 300, 300, 300, 300, 300],
+types: ["Шарики цветные", "Шарики белые", "Лампочки желтые 12м", "Лампочки цветные 8м", "Лампочки синие 8м", "Снежинки 6м"],
+description: "Гирлянды в ассортименте",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--lights"
 }, {
 name: "Набор шариков",
 id: 6,
-price: [100, 200, 300],
-types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+price: [300, 300, 300],
+types: ["разные цвета", "разные цвета", "разные цвета"],
+description: "Набор из 6 различных шаров, пластик",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--bauble"
 }, {
-name: "Комплект Премиум",
+name: "Комплект «Стандарт»",
 id: 7,
-price: [100, 200, 300],
+price: [2000, 3000, 4000],
 types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+description: "В комплекте 18-24 шаров и 2-3 гирлянды в зависимости от высоты",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--sack"
 }, {
-name: "Комплект Классический",
+name: "Комплект «Премиум»",
 id: 8,
-price: [100, 200, 300],
+price: [2500, 3500, 6000],
 types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+description: "В комплекте 18-24 шаров и 2-3 гирлянды в зависимости от высоты",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--sack"
 },{
-name: "Комплект Эксклюзивный",
+name: "Комплект «Базовый»",
 id: 9,
-price: [100, 200, 300],
+price: [1800, 2300, 3000],
 types: ["150 см", "180 см", "210 см"],
-description: "Высота от 1.5м до 2.1м",
+description: "В комплекте 18-24 шаров и 2-3 гирлянды в зависимости от высоты",
 image: "img/product-placeholder.jpg",
 buttonClass: "product__order--sack"
 }
@@ -179,7 +179,7 @@ buttonClass: "product__order--sack"
               <div class="product__container">
                 <b class="product__name">{{product.name}} {{product.types[loop.index0]}}</b>
                 <b class="product__description">{{product.description}}</b>
-                <b class="product__description">{{product.types[loop.index0]}}</b>
+                <b class="product__description">Характеристики: {{product.types[loop.index0]}}</b>
                 <div class="product__wrapper">
                   <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
                 </div>

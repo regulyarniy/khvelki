@@ -17,11 +17,12 @@
 .product__name {
   margin-bottom: 85px;
   padding-top: 20px;
+  min-width: 100%;
   min-height: 76px;
-  width: 100%;
   color: $color-gold;
   text-align: center;
   text-transform: uppercase;
+  white-space: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -86,6 +87,10 @@
 
 .product__description {
   width: 100%;
+  white-space: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .product__wrapper {
