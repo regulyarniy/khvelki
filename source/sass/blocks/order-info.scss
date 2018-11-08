@@ -1,6 +1,6 @@
 .order-info {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: lighten($color-salad, 15);
   background-image: linear-gradient(to top, lighten($color-salad, 15), #ffffff);
 }
@@ -15,6 +15,7 @@
 .order-info__title {
   margin: 0;
   margin-bottom: 20px;
+  text-align: center;
   text-transform: uppercase;
   font-size: 24px;
   line-height: 24px;
@@ -36,7 +37,7 @@
   width: 48%;
   counter-increment: order-info-counter;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 24px;
 
   &:nth-child(2n) {
     margin-right: 0;
