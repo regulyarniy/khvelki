@@ -2,7 +2,11 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: lighten($color-salad, 15);
-  background-image: linear-gradient(to top, lighten($color-salad, 15), #ffffff);
+  background-image: url("../img/sleigh-bg.svg"),
+    linear-gradient(to top, lighten($color-salad, 15), #ffffff);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .order-info__container {

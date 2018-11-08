@@ -2,6 +2,10 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: lighten($color-gold, 35);
+  background-image: url("../img/present-bg.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .delivery__container {
