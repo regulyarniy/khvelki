@@ -107,11 +107,16 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+
+  &--nowrap {
+    width: auto;
+  }
 }
 
 .order-form__cart-total,
 .order-form__cart-items {
   margin-right: 3px;
+  white-space: pre-line;
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
@@ -120,6 +125,7 @@
 .order-form__reset {
   position: relative;
   display: inline-block;
+  margin-top: 10px;
   margin-left: auto;
   padding-top: 5px;
   padding-right: 30px;

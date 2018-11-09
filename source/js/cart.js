@@ -25,7 +25,7 @@
       e.addEventListener("click", function(evt) {
         evt.preventDefault();
         cartTotal += parseInt(e.dataset.price);
-        cartList += e.dataset.name + ", ";
+        cartList += e.dataset.name + "\r\n";
         updateCart();
         e.textContent = "Добавлено!";
       })
