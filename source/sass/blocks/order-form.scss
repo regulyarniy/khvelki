@@ -2,3 +2,74 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.order-form__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-form__title {
+  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed $color-tree;
+  color: $color-tomato;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.order-form__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 3px dashed $color-salad;
+}
+
+.order-form__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.order-form__label {
+  margin-right: 10px;
+}
+
+.order-form__input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid $color-ocean;
+}
+
+.order-form__submit {
+  display: inline-block;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  border: 2px solid $color-ocean;
+  border-radius: 10px;
+  background: transparent;
+  color: $color-ocean;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

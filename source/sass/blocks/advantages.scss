@@ -4,8 +4,8 @@
   background-color: $color-content;
   background-image: linear-gradient(
     to bottom,
-    $color-content,
-    lighten($color-content, 50)
+    lighten($color-content, 50),
+    #ffffff
   );
   color: #ffffff;
 }
@@ -21,9 +21,9 @@
   margin: 0;
   margin-bottom: 20px;
   width: 100%;
+  color: $color-tree;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: $shadow-glowing;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;

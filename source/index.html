@@ -92,7 +92,7 @@ buttonClass: "product__order--sack"
 
   <header class="page-header no-js">
     <div class="page-header__wrapper container">
-      <svg class="page-header__image" width="50" height="50" alt="Логотип"><use xlink:href="#christmas_tree"/></svg>
+      <svg class="page-header__image" width="50" height="50"><use xlink:href="#christmas_tree"/></svg>
       <h1 class="page-header__title">Магазин Елок</h1>
       <button class="page-header__button no-js" type="button"><span class="visually-hidden">Открыть\закрыть меню</span></button>
     </div>
@@ -191,10 +191,10 @@ buttonClass: "product__order--sack"
           </ul>
         </div>
         <button class="product__slide product__slide--prev" type="button">
-          <svg class="page-header__image" width="25" height="25" alt="Предыдущий вариант"><use xlink:href="#slider-button"/></svg>
+          <svg class="page-header__image" width="25" height="25"><use xlink:href="#slider-button"/></svg>
         </button>
         <button class="product__slide product__slide--next" type="button">
-          <svg class="page-header__image" width="25" height="25" alt="Следующий вариант"><use xlink:href="#slider-button"/></svg>
+          <svg class="page-header__image" width="25" height="25"><use xlink:href="#slider-button"/></svg>
         </button>
       </div>
       {% endfor %}
@@ -202,13 +202,25 @@ buttonClass: "product__order--sack"
 
     <section class="order-form">
       <div class="order-form__container container">
-        <h2 class="order-form__title">Отправить заказ</h2>
+        <h2 class="order-form__title">Оформить заказ</h2>
         <form class="order-form__form" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
-          <label class="order-form__label" for="name">Ваше имя*:</label>
-          <input class="order-form__input" type="text" name="name" id="name" placeholder="Имя" required>
-          <label class="order-form__label" for="tel">Телефон*:</label>
-          <input class="order-form__input" type="tel" name="tel" id="tel" placeholder="+7-XXX-XXX-XX-XX" required>
-          <button class="order-form__submit" type="submit">Отправить заказ</button>
+          <div class="order-form__wrapper">
+            <label class="order-form__label" for="name">Ваше имя*:</label>
+            <input class="order-form__input" type="text" name="name" id="name" placeholder="Имя" required>
+          </div>
+            <div class="order-form__wrapper">
+              <label class="order-form__label" for="tel">Телефон*:</label>
+              <input class="order-form__input" type="tel" name="tel" id="tel" placeholder="+7-XXX-XXX-XX-XX" required>
+          </div>
+              <div class="order-form__wrapper">
+                <label class="order-form__label" for="address">Адрес доставки*:</label>
+                <input class="order-form__input" type="text" name="address" id="address" placeholder="ул. Ленина, д.1, кв. 1" required>
+          </div>
+                <div class="order-form__wrapper">
+                  <label class="order-form__label" for="comment">Комментарий к заказу:</label>
+                  <input class="order-form__input" type="text" name="comment" id="comment" placeholder="Дополнительная информация">
+          </div>
+                  <button class="order-form__submit" type="submit">Заказать</button>
         </form>
       </div>
     </section>
