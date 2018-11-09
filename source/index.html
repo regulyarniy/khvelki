@@ -166,6 +166,10 @@ buttonClass: "product__order--sack"
       </div>
     </section>
 
+    <section class="gallery">
+      Галерея
+    </section>
+
     <section class="catalog" id="catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>
       <b class="catalog__descrition">Выберите свою елочку на новый год</b>
@@ -184,7 +188,7 @@ buttonClass: "product__order--sack"
                   <img class="product__image" src="{{product.image}}" alt="Фото {{product.name}}" width="300" height="517">
                 </div>
                   <b class="product__price">{{product.price[loop.index0]}} руб.</b>
-                  <a class="product__order no-js {{product.buttonClass}}" href="#order">Купить</a>
+                  <a class="product__order {{product.buttonClass}}" href="#order" data-name="{{product.name}} {{product.types[loop.index0]}}" data-price="{{product.price[loop.index0]}}">Купить</a>
                 </div>
             </li>
             {% endfor %}
@@ -220,6 +224,17 @@ buttonClass: "product__order--sack"
                   <label class="order-form__label" for="comment">Комментарий к заказу:</label>
                   <input class="order-form__input" type="text" name="comment" id="comment" placeholder="Дополнительная информация">
           </div>
+                  <input class="order-form__hidden" type="text" name="products" id="products" hidden>
+                  <input class="order-form__hidden" type="text" name="total" id="total" hidden>
+                  <p class="order-form__cart no-js">
+                    <span class="order-form__wrapper">
+                      <span class="order-form__cart-label">Товары в заказе:</span> <span class="order-form__cart-items">-</span>
+                    </span>
+                    <span class="order-form__wrapper">
+                      <span class="order-form__cart-label">Сумма заказа:</span> <span class="order-form__cart-total">0 руб.</span>
+                    </span>
+                    <button class="order-form__reset" type="button">Сбросить</button>
+                  </p>
                   <button class="order-form__submit" type="submit">Заказать</button>
         </form>
       </div>
