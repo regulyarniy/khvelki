@@ -73,6 +73,45 @@ buttonClass: "product__order--sack"
 }
 ]%}
 
+{% set images = [
+{
+image: "gallery-1",
+caption: "Комплект «Стандарт»"
+},
+{
+image: "gallery-2",
+caption: "Гирлянда шарики"
+},
+{
+image: "gallery-3",
+caption: "Комплект «Премиум»"
+},
+{
+image: "gallery-4",
+caption: "Комплект «Премиум»"
+},
+{
+image: "gallery-5",
+caption: "Котик"
+},
+{
+image: "gallery-6",
+caption: "Набор шариков и гирлянда"
+},
+{
+image: "gallery-7",
+caption: "Игрушка"
+},
+{
+image: "gallery-8",
+caption: "Комплект «Базовый»"
+},
+{
+image: "gallery-9",
+caption: "Елка «Премиум»"
+}
+]%}
+
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -101,12 +140,11 @@ buttonClass: "product__order--sack"
     </div>
     <nav class="page-header__navigation">
       <ul class="page-header__list">
-        <li class="page-header__item"><a class="page-header__link" href="#top">Наверх</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="#hero">Акции</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#gallery">Галерея</a></li>
         <li class="page-header__item"><a class="page-header__link" href="#catalog">Каталог</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="#">Доставка</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="#order">Заказ</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="#">Контакты</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#order-form">Форма заказа</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#delivery">Доставка</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="#footer">Контакты</a></li>
       </ul>
     </nav>
 
@@ -169,8 +207,22 @@ buttonClass: "product__order--sack"
       </div>
     </section>
 
-    <section class="gallery">
-      Галерея
+    <section class="gallery" id="gallery">
+      <div class="gallery__container container">
+        <h2 class="gallery__title">Фото нашей продукции</h2>
+        <ul class="gallery__list">
+          {% for image in images %}
+          <li class="gallery__item">
+            <a class="gallery__link" href="img/{{image.image}}.jpg" data-caption="{{image.caption}}">
+            <picture>
+              <source type="image/webp" srcset="img/{{image.image}}_tn.webp">
+              <img  src="img/{{image.image}}_tn.jpg" alt="{{image.caption}}" width="150" height="150">
+            </picture>
+          </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </section>
 
     <section class="catalog" id="catalog">
@@ -207,7 +259,7 @@ buttonClass: "product__order--sack"
       {% endfor %}
     </section>
 
-    <section class="order-form">
+    <section class="order-form" id="order-form">
       <div class="order-form__container container">
         <h2 class="order-form__title">Оформить заказ</h2>
         <form class="order-form__form" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
@@ -296,7 +348,7 @@ buttonClass: "product__order--sack"
       </div>
     </section>
 
-    <section class="delivery">
+    <section class="delivery" id="delivery">
       <div class="container delivery__container">
         <h2 class="delivery__title">Доставка и оплата</h2>
         <p class="delivery__description">
@@ -309,7 +361,7 @@ buttonClass: "product__order--sack"
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer" id="footer">
     <h2 class="page-footer__title">Наши контакты:</h2>
     <a class="page-footer__link page-footer__link--whatsapp" href="https://wa.me/79098788011">WhatsApp</a>
     <a class="page-footer__link page-footer__link--tel" href="tel:+79098788011">Телефон: +79098788011</a>

@@ -1,6 +1,6 @@
 .guarantee {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: lighten($color-salad, 15);
   background-image: linear-gradient(
     to bottom,
@@ -19,6 +19,7 @@
 .guarantee__title {
   margin: 0;
   margin-bottom: 20px;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   font-size: 24px;

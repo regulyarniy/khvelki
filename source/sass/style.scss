@@ -6,6 +6,7 @@
 @import "variables";
 //Helpers and global
 @import "scaffolding";
+@import "baguetteBox";
 //Blocks
 @import "blocks/container";
 @import "blocks/page-header";
@@ -19,3 +20,4 @@
 @import "blocks/delivery";
 @import "blocks/testimonials";
 @import "blocks/order-form";
+@import "blocks/gallery";
