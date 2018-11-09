@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url("../img/2019-bg.svg");
+  background-position: center 10px;
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
 }
 
 .catalog__descrition {
