@@ -2,7 +2,8 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: lighten($color-gold, 35);
-  background-image: url("../img/present-bg.svg");
+  background-image: url("../img/present-bg.svg"),
+    linear-gradient(to top, lighten($color-gold, 35), #ffffff);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

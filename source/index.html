@@ -201,12 +201,16 @@ buttonClass: "product__order--sack"
     </section>
 
     <section class="order-form">
-      <h2 class="order-form__title">Отправить заказ</h2>
-      <form class="order-form__form" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
-        <input class="order-form__input" type="text" name="name" id="name">
-        <label for="name" class="order-form__label"></label>
-        <button class="order-form__submit" type="submit">Отправить заказ</button>
-      </form>
+      <div class="order-form__container container">
+        <h2 class="order-form__title">Отправить заказ</h2>
+        <form class="order-form__form" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+          <label class="order-form__label" for="name">Ваше имя*:</label>
+          <input class="order-form__input" type="text" name="name" id="name" placeholder="Имя" required>
+          <label class="order-form__label" for="tel">Телефон*:</label>
+          <input class="order-form__input" type="tel" name="tel" id="tel" placeholder="+7-XXX-XXX-XX-XX" required>
+          <button class="order-form__submit" type="submit">Отправить заказ</button>
+        </form>
+      </div>
     </section>
 
     <section class="order-info">
