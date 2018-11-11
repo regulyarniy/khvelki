@@ -82,8 +82,84 @@ try {
     $mail->AltBody = 'Заказ № '.$upvotes.'/nИмя: '.$_POST['name'].'/nТелефон: '.$_POST['tel'].'/nАдрес: '.$_POST['address'].'/nКомментарий: '.$_POST['comment'].'/nТовары: '.$_POST['products'].'/nИтог(пересчитать!): '.$_POST['total'];
 
     $mail->send();
-    echo 'Заказ принят. Номер вашего заказа: '.$upvotes;
+    echo '
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Магазин исскуственных ёлок khvelki.ru</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+      <style>
+        body {
+          background-color: #1a2f4c;
+          color: #e9f3fb;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        p {
+          font-size: 30px;
+          line-height: 36px;
+          margin: auto;
+        }
+      </style>
+    </head>
+    
+    <body>
+      <p>
+        Спасибо! Заказ принят.<br> Номер вашего заказа: '.$upvotes.'<br>В ближайщее время с Вами свяжется наш менеджер для уточнения заказа
+      </p>
+    </body>
+    
+    </html>
+    ';
 } catch (Exception $e) {
-    echo 'Сообщение не отправлено!. Ошибка: ', $mail->ErrorInfo;
+    echo '
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Магазин исскуственных ёлок khvelki.ru</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+      <style>
+        body {
+          background-color: #1a2f4c;
+          color: #e9f3fb;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        p {
+          font-size: 30px;
+          line-height: 36px;
+          margin: auto;
+        }
+      </style>
+    </head>
+    
+    <body>
+      <p>
+        Что то пошло не так! Просим Вас совершить заказ по телефону +79098788011. Ошибка: '.$mail->ErrorInfo.'
+      </p>
+    </body>
+    
+    </html>
+    ';
 }
  ?>
