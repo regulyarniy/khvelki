@@ -6,3 +6,9 @@
   min-width: 320px;
   max-width: 100%;
 }
+
+@media (min-width: $breakpoint-desktop) {
+  padding-right: 30px;
+  padding-left: 30px;
+  max-width: 1860px;
+}
