@@ -1,7 +1,7 @@
 //Countdown timer
 (function() {
   'use strict';
-  var toDate = new Date("Dec 20 2018").getTime(),
+  var toDate = new Date("Jan 1 2019").getTime(),
     now = new Date().getTime(),
     secondsToNewYear = Math.floor((toDate - now) / 1000),
     daysElement = document.querySelector(".hero__count--days"),
