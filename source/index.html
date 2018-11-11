@@ -1,74 +1,107 @@
 {% set products = [ {
 name: "Елка «Стандарт»",
 id: 1,
-price: [2000, 3000, 4000],
+price: [2549, 4049, 4849],
 types: ["150 см", "180 см", "210 см"],
-description: "Собирается за 5 минут, отлично выглядит! Кончики веток светло-зеленого цвета",
-image: "tree-standart",
+description: [
+"Собирается за 5 минут, отлично выглядит! Кончики веток светло-зеленого цвета. Высота: 150 см",
+"Собирается за 5 минут, отлично выглядит! Кончики веток светло-зеленого цвета. Высота: 180 см",
+"Собирается за 5 минут, отлично выглядит! Кончики веток светло-зеленого цвета. Высота: 210 см"
+],
+image: ["tree-standart", "tree-standart", "tree-standart"],
 buttonClass: "product__order--tree"
 }, {
 name: "Елка «Премиум»",
 id: 2,
-price: [2500, 3500, 6000],
+price: [3749, 4749, 5749],
 types: ["150 см", "180 см", "210 см"],
-description: "Как настоящая! В комплекте шишки и красные ягодки, кончики веток украшены инеем",
-image: "tree-premium",
+description: [
+"Как настоящая! В комплекте шишки и красные ягодки, кончики веток украшены инеем. Высота: 150 см",
+"Как настоящая! В комплекте шишки и красные ягодки, кончики веток украшены инеем. Высота: 180 см",
+"Как настоящая! В комплекте шишки и красные ягодки, кончики веток украшены инеем. Высота: 210 см"
+],
+image: ["tree-premium", "tree-premium", "tree-premium"],
 buttonClass: "product__order--tree"
 }, {
 name: "Елка «Базовая»",
 id: 3,
-price: [1800, 2300, 3000],
+price: [1789, 2449, 3349],
 types: ["150 см", "180 см", "210 см"],
-description: "Простая, но красивая елка. Кончики веток слегка белые",
-image: "tree-basic",
+description: [
+"Простая, но красивая елка. Кончики веток слегка белые. Высота: 150 см",
+"Простая, но красивая елка. Кончики веток слегка белые. Высота: 180 см",
+"Простая, но красивая елка. Кончики веток слегка белые. Высота: 210 см"
+],
+image: ["tree-basic", "tree-basic", "tree-basic"],
 buttonClass: "product__order--tree"
 }, {
 name: "Елка в горшке",
 id: 4,
-price: [2000, 2000],
+price: [2249, 2249],
 types: ["с снежинками", "с лампочками"],
-description: "Елка в горшке, высота 60 см, с встроенной гирляндой и звездой. Отличный выбор для офисного стола!",
-image: "tree-mini",
+description: [
+"Елка в горшке, высота 60 см, с встроенной гирляндой(снежинки) и звездой. Отличный выбор для офисного стола!",
+"Елка в горшке, высота 60 см, с встроенной гирляндой(лампочки) и звездой. Отличный выбор для офисного стола!"
+],
+image: ["tree-mini", "tree-mini", "tree-mini"],
 buttonClass: "product__order--tree-pot"
 }, {
 name: "Гирлянды",
 id: 5,
-price: [300, 300, 300],
-types: ["Шарики цветные", "Лампочки желтые 12м", "Лампочки цветные 8м"],
-description: "Гирлянды в ассортименте",
-image: "lights",
+price: [424, 424, 199],
+types: ["шарики разноцветные", "золотые лампочки", "лампочки разноцветные"],
+description: [
+"Гирлянда(шарики разноцветные). Длина: 7м",
+"Гирлянда(золотые лампочки). Длина: 12м",
+"Гирлянда(лампочки разноцветные). Длина: 7м"
+],
+image: ["lights", "lights", "lights"],
 buttonClass: "product__order--lights"
 }, {
 name: "Набор шариков",
 id: 6,
-price: [300],
+price: [299],
 types: ["разноцветный"],
-description: "Набор из 6 различных шаров, пластик, цвета случайные",
-image: "balls",
+description: [
+"Набор из 6 различных шаров, пластик, цвета случайные"
+],
+image: ["balls"],
 buttonClass: "product__order--bauble"
 }, {
 name: "Комплект «Стандарт»",
 id: 7,
-price: [2000, 3000, 4000],
+price: [3369, 4869, 6369],
 types: ["150 см", "180 см", "210 см"],
-description: "В комплекте 18-24 шаров и 2-3 гирлянды в зависимости от высоты",
-image: "set-standart",
+description: [
+"В комплекте 18 игрушек, звезда и 2 гирлянды. Высота елки: 150см",
+"В комплекте 18 игрушек, звезда и 2 гирлянды. Высота елки: 180см",
+"В комплекте 24 игрушки, звезда и 3 гирлянды. Высота елки: 210см"
+],
+image: ["set-standart", "set-standart", "set-standart"],
 buttonClass: "product__order--sack"
 }, {
 name: "Комплект «Премиум»",
 id: 8,
-price: [2500, 3500, 6000],
+price: [4569, 5569, 7269],
 types: ["150 см", "180 см", "210 см"],
-description: "В комплекте 18-24 шаров и 2-3 гирлянды в зависимости от высоты",
-image: "set-premium",
+description: [
+"В комплекте 18 игрушек, звезда и 2 гирлянды. Высота елки: 150см",
+"В комплекте 18 игрушек, звезда и 2 гирлянды. Высота елки: 180см",
+"В комплекте 24 игрушки, звезда и 3 гирлянды. Высота елки: 210см"
+],
+image: ["set-premium", "set-premium", "set-premium"],
 buttonClass: "product__order--sack"
 },{
 name: "Комплект «Базовый»",
 id: 9,
-price: [1800, 2300, 3000],
+price: [2609, 3269, 4749],
 types: ["150 см", "180 см", "210 см"],
-description: "В комплекте 18-24 шаров и 2-3 гирлянды в зависимости от высоты",
-image: "set-basic",
+description: [
+"В комплекте 18 игрушек, звезда и 2 гирлянды. Высота елки: 150см",
+"В комплекте 18 игрушек, звезда и 2 гирлянды. Высота елки: 180см",
+"В комплекте 24 игрушки, звезда и 3 гирлянды. Высота елки: 210см"
+],
+image: ["set-basic", "set-basic", "set-basic"],
 buttonClass: "product__order--sack"
 }
 ]%}
@@ -237,12 +270,11 @@ caption: "Елка «Премиум»"
             <li class="catalog__item product">
               <div class="product__container">
                 <b class="product__name">{{product.name}} {{product.types[loop.index0]}}</b>
-                <b class="product__description">{{product.description}}</b>
-                <b class="product__description">Характеристики: {{product.types[loop.index0]}}</b>
+                <b class="product__description">{{product.description[loop.index0]}}</b>
                 <div class="product__wrapper">
                   <picture>
-                    <source type="image/webp" srcset="img/{{product.image}}@1x.webp 1x, img/{{product.image}}@2x.webp 2x">
-                    <img class="product__image" src="img/{{product.image}}@1x.jpg" srcset="img/{{product.image}}@2x.jpg 2x" alt="Фото {{product.name}}" width="300" height="517">
+                    <source type="image/webp" srcset="img/{{product.image[loop.index0]}}@1x.webp 1x, img/{{product.image[loop.index0]}}@2x.webp 2x">
+                    <img class="product__image" src="img/{{product.image[loop.index0]}}@1x.jpg" srcset="img/{{product.image[loop.index0]}}@2x.jpg 2x" alt="Фото {{product.name}}" width="300" height="517">
                   </picture>
                 </div>
                 <b class="product__price">{{product.price[loop.index0]}} руб.</b>
