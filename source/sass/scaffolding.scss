@@ -2,20 +2,20 @@
 @font-face {
   font-weight: 400;
   font-style: normal;
-  font-family: "Spectral";
-  src: local("Spectral Regular"), local("Spectral-Regular"),
-    url("../fonts/spectral-regular-webfont.woff2") format("woff2"),
-    url("../fonts/spectral-regular-webfont.woff") format("woff");
+  font-family: "Alegreya";
+  src: local("Alegreya Regular"), local("Alegreya-Regular"),
+    url("../fonts/alegreya-regular-webfont.woff2") format("woff2"),
+    url("../fonts/alegreya-regular-webfont.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-weight: 700;
   font-style: normal;
-  font-family: "Spectral";
-  src: local("Spectral Bold"), local("Spectral-Bold"),
-    url("../fonts/spectral-bold-webfont.woff2") format("woff2"),
-    url("../fonts/spectral-bold-webfont.woff") format("woff");
+  font-family: "Alegreya";
+  src: local("Alegreya Bold"), local("Alegreya-Bold"),
+    url("../fonts/alegreya-bold-webfont.woff2") format("woff2"),
+    url("../fonts/alegreya-bold-webfont.woff") format("woff");
   font-display: swap;
 }
 
