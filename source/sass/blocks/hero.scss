@@ -169,4 +169,9 @@
   .hero__countdown {
     max-width: $content-desktop;
   }
+
+  .hero__button {
+    min-width: 20%;
+    text-align: center;
+  }
 }
