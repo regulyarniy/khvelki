@@ -119,3 +119,54 @@
     color: $color-tomato;
   }
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .hero {
+    background-image: url("../img/hero-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-bg-tablet@2x.jpg");
+    }
+  }
+
+  .hero__lead {
+    margin-top: 40px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .hero__count {
+    padding: 15px;
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  .hero__label {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
+  .hero__button {
+    padding: 15px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .hero {
+    background-image: url("../img/hero-bg-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-bg-desktop@2x.jpg");
+    }
+  }
+
+  .hero__lead,
+  .hero__countdown {
+    max-width: $content-desktop;
+  }
+}
