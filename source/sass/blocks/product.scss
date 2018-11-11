@@ -22,6 +22,7 @@
   color: $color-gold;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: $shadow-gold;
   white-space: normal;
   font-weight: 700;
   font-size: 24px;
@@ -43,7 +44,8 @@
   padding-bottom: 10px;
   padding-left: 30px;
   width: 60%;
-  border-radius: 5px;
+  border: 2px solid $color-gold;
+  border-radius: 15px;
   background-color: $color-salad;
   background-position: 5px 50%;
   background-size: 30px 30px;

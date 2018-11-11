@@ -246,21 +246,22 @@ caption: "Елка «Премиум»"
                     <source type="image/webp" srcset="img/{{product.image}}@1x.webp 1x, img/{{product.image}}@2x.webp 2x">
                     <img class="product__image" src="img/{{product.image}}@1x.jpg" srcset="img/{{product.image}}@2x.jpg 2x" alt="Фото {{product.name}}" width="300" height="517">
                   </picture>
-
                 </div>
                 <b class="product__price">{{product.price[loop.index0]}} руб.</b>
-                <a class="product__order {{product.buttonClass}}" href="#order" data-name="{{product.name}} {{product.types[loop.index0]}}" data-price="{{product.price[loop.index0]}}">Купить</a>
+                <a class="product__order {{product.buttonClass}}" href="#order-form" data-name="{{product.name}} {{product.types[loop.index0]}}" data-price="{{product.price[loop.index0]}}">Купить</a>
               </div>
             </li>
             {% endfor %}
           </ul>
         </div>
+        {% if (product.price | length) > 1 %}
         <button class="product__slide product__slide--prev" type="button">
           <svg class="page-header__image" width="25" height="25"><use xlink:href="#slider-button"/></svg>
         </button>
         <button class="product__slide product__slide--next" type="button">
           <svg class="page-header__image" width="25" height="25"><use xlink:href="#slider-button"/></svg>
         </button>
+        {% endif %}
       </div>
       {% endfor %}
     </section>

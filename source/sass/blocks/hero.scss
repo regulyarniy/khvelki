@@ -10,7 +10,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: $color-gold;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/hero-bg-mobile@2x.jpg");
@@ -30,9 +30,8 @@
   margin: 0;
   margin-top: 20px;
   width: 94%;
-  color: $color-sky;
   text-align: center;
-  text-shadow: $shadow-glowing;
+  text-shadow: $shadow-gold;
 }
 
 .hero__title {
@@ -83,14 +82,15 @@
   border: 1px solid #000000;
   border-radius: 5px;
   background-color: $color-gold;
-  color: $color-jade;
+  color: $color-ocean;
   vertical-align: middle;
+  text-shadow: $shadow-gold;
   font-size: 24px;
   line-height: 28px;
 }
 
 .hero__label {
-  color: $color-sky;
+  text-shadow: $shadow-gold;
   font-size: 20px;
   line-height: 24px;
 }
@@ -102,9 +102,11 @@
   min-width: 200px;
   border: 2px solid $color-tree;
   border-radius: 15px;
-  color: $color-sky;
+  background-color: #f5e5cb;
+  color: $color-ocean;
   vertical-align: middle;
   text-transform: uppercase;
+  text-shadow: $shadow-glowing;
   font-weight: 700;
   font-size: 20px;
   font-family: $font-primary;
