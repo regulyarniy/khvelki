@@ -62,6 +62,15 @@ gulp.task("copy", function() {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("php", function() {
+  return gulp.src([
+      "source/php/**/*"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("css", function() {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -156,7 +165,8 @@ gulp.task("build", gulp.series(
   "css",
   "js",
   "sprite",
-  "html"
+  "html",
+  "php"
 ));
 
 gulp.task("start", gulp.series(
