@@ -230,10 +230,8 @@ caption: "Елка «Премиум»"
       <b class="catalog__descrition">Выберите свою елочку на новый год</b>
       <b class="catalog__caption">Чтобы не тратить время на выбор мы предлагаем Вам лучшие исскуственные елки в этом году</b>
       {% for product in products %}
-      {% if (product.price | length) > 1 %}
       <div class="catalog__slider">
         <div class="catalog__frame">
-          {% endif %}
           <ul class="catalog__list">
             {% for price in product.price %}
             <li class="catalog__item product">
@@ -248,7 +246,7 @@ caption: "Елка «Премиум»"
                   </picture>
                 </div>
                 <b class="product__price">{{product.price[loop.index0]}} руб.</b>
-                <a class="product__order {{product.buttonClass}}" href="#order-form" data-name="{{product.name}} {{product.types[loop.index0]}}" data-price="{{product.price[loop.index0]}}">Купить</a>
+                <a class="product__order {{product.buttonClass}}" href="#order-form" data-name="{{product.name}} {{product.types[loop.index0]}}" data-price="{{product.price[loop.index0]}}">Хочу это!</a>
               </div>
             </li>
             {% endfor %}

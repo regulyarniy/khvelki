@@ -22,7 +22,6 @@
   color: $color-gold;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: $shadow-gold;
   white-space: normal;
   font-weight: 700;
   font-size: 24px;
@@ -129,5 +128,11 @@
   &--prev svg,
   &--next svg {
     width: 25px;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .product__description {
+    min-height: 60px;
   }
 }

@@ -38,9 +38,9 @@
 .gallery__item {
   display: block;
   margin: 10px;
-  width: 152px;
-  height: 152px;
-  border: 1px solid #000000;
+  width: 162px;
+  height: 162px;
+  border: 6px double $color-gold;
   list-style: none;
 }
 
@@ -52,5 +52,12 @@
   .gallery__title {
     font-size: 28px;
     line-height: 28px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .gallery {
+    margin: 0 auto;
+    max-width: $content-desktop;
   }
 }

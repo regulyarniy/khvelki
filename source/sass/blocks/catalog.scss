@@ -63,3 +63,36 @@
   width: 100%;
   list-style: none;
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .catalog {
+    justify-content: flex-start;
+  }
+
+  .catalog__descrition {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .catalog__caption {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .catalog__slider {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .catalog {
+    margin: 0 auto;
+    max-width: $content-desktop;
+  }
+
+  .catalog__slider {
+    max-width: 33.333%;
+    width: 33.333%;
+  }
+}
