@@ -56,3 +56,32 @@
     line-height: 50px;
   }
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .order-info__title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .order-info__item {
+    font-size: 24px;
+    line-height: 28px;
+
+    &::before {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .order-info__item {
+    margin-right: 1%;
+    width: 24%;
+
+    &:nth-child(2n) {
+      margin-right: 1%;
+      width: 24%;
+    }
+  }
+}
