@@ -32,3 +32,5 @@ build/
 
 # env variables
 .env
+
+.idea
